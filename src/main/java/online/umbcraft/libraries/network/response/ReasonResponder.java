@@ -47,6 +47,16 @@ public abstract class ReasonResponder {
 
 
     /**
+     * removes an RSA public key from the list of recognized keys
+     *
+     * @param remote_public the public RSA key to be removed from the list of known keys
+     */
+    public final void removeKnown(String remote_public) {
+        known.remove(remote_public);
+    }
+
+
+    /**
      * Returns whether or not this remote RSA public key is recognized
      *
      * @param remote_public_b64 the public RSA key of the incoming message's host
